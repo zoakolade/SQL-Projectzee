@@ -1,4 +1,4 @@
-What are your risk areas? Identify and describe them.
+## What are your risk areas? Identify and describe them.
 
 I. Data Loss: Deleting or altering data without proper backups can result in irreversible damage therefore while importing the data I did not delete or alter any of the details provided. I created the tables then imported the csv.files without altering any detail
 
@@ -10,10 +10,11 @@ IV. Null Values: The data contains a lot of Null values which if not properly ha
 
 V. Join Operations: Using inappropriate join conditions can lead to incorrect or incomplete results. Therefore I used subqueries where possible to double my results.
 
-Describe your QA process and include the SQL queries used to execute it.
+## Describe your QA process and include the SQL queries used to execute it.
 
 QA Process was used to check the completeness, uniqueness and consistency of the data. To check for the completeness I used the COUNT in my query to confirm if there is any missing data from the entire data and which column has a NULL value. I used DISTINCT function to further drill down to the unique values in the data. For the consistency I ran a corrected query on for date and time columns where the initial data was presented as an integer and not a datetime function.
 
+```sql
 SELECT
 COUNT(*) AS total_rows,
 COUNT(productsku) AS column1_nulls,
@@ -36,6 +37,8 @@ COUNT(DISTINCT sentimentScore) AS column6_nulls,
 COUNT(DISTINCT sentimentMagnitude) AS column7_nulls,
 COUNT(DISTINCT ratio) AS column8_nulls
 FROM sales_report;
-QA Process: Some of the risk areas are;
+```
+
+## QA Process: Some of the risk areas are;
 
 
