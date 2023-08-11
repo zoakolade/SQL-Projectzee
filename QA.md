@@ -40,5 +40,7 @@ FROM sales_report;
 ```
 
 ## QA Process: Some of the risk areas are;
-
+1. Presence of Unwanted or Irrelavent columns
+2. Presence of null values
+3. Trying not to delete relevant information due to data cleaning
 
